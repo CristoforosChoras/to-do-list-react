@@ -1,9 +1,15 @@
 import React from "react";
 
-const Form = () => {
+const Form = ({setInputText}) => {
+
+const inputTextHandler = (event)=>{
+  setInputText(event.target.value)
+}
+
+
   return (
     <form>
-      <input type="text" className="toDoInput"></input>
+      <input onChange={inputTextHandler} type="text" className="toDoInput" ></input>
       <button className="btn"></button>
       <div className="select">
         <select name="" className="filterToDo">
