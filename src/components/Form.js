@@ -4,12 +4,12 @@ const Form = () => {
   return (
     <form>
       <input type="text" className="toDoInput"></input>
-      <button></button>
+      <button className="btn"></button>
       <div className="select">
         <select name="" className="filterToDo">
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
+          <option value="all">All</option>
+          <option value="checked">Checked</option>
+          <option value="more">More To Do</option>
         </select>
       </div>
     </form>

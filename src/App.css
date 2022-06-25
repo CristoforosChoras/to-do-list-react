@@ -1,25 +1,51 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.App{
+body {
+  background-color: rgb(190, 190, 250);
+  color: wheat;
+  min-height: 100vh;
+}
+
+.App {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 8rem;
 }
-.header{
+.header {
   font-size: 4rem;
-  
 }
-form{
-  height: 40vh;
+/*form input button select styles */
+form {
+  min-height: 20vh;
   width: 25vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aqua;
   border-radius: 10px;
+}
+.toDoInput {
+  width: 70%;
+  height: 1.7rem;
+  border: none;
+
+}
+.btn {
+  width: 2rem;
+  height: 1.7rem;
+  border: none;
+  cursor: pointer;
+}
+
+.filterToDo {
+  width: 6.2rem;
+  height: 1.7rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 9%;
 }
