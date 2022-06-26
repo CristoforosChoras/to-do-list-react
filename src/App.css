@@ -15,7 +15,7 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
-}
+  border: 2px green solid;}
 .header {
   font-size: 4rem;
 }
@@ -27,13 +27,12 @@ form {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  border: 2px black solid;
+  border: 2px green solid;
 }
 .toDoInput {
   width: 70%;
   height: 1.7rem;
-  border: none;
-
+  border: 2px green solid;
 }
 .btn {
   width: 2rem;
@@ -49,12 +48,14 @@ form {
   border-radius: 5px;
   cursor: pointer;
   margin: 9%;
+  border: 2px green solid;
 }
 
 .holdItems{
   background-color: black;
   width: 20vw;
   height: 20vh;
+  border: 2px black solid;
 }
 .checked{
 display: none;}
