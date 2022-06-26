@@ -9,7 +9,7 @@ const ToDoList = ({ todo, setTodo }) => {
           <ListTodo
             setTodo={setTodo}
             todo={todo}
-            todoItem={todoItem}
+            todoItem={todoItem  }
             key={todoItem.id}
             text={todoItem.text}
           />

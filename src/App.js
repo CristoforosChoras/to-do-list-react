@@ -7,6 +7,7 @@ import ToDoList from "./components/ToDoList";
 function App() {
   const [inputText, setInputText] = useState("");
   const [todo, setTodo] = useState([]);
+  const [status, setStatus]= useState("all")
 
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
         todo={todo}
         setTodo={setTodo}
         setInputText={setInputText}
+        setStatus={setStatus}
       />
       <ToDoList setTodo={setTodo} todo={todo} />
     </div>

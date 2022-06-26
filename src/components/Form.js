@@ -13,6 +13,10 @@ const Form = ({ setInputText, todo, setTodo, inputText }) => {
     setInputText("");
   };
 
+  const statusHandler =(event)=>{
+    console.log(event);
+  }
+
   return (
     <form>
       <input
@@ -23,7 +27,7 @@ const Form = ({ setInputText, todo, setTodo, inputText }) => {
       ></input>
       <button onClick={submitTodoHandler} className="btn"></button>
       <div className="select">
-        <select name="" className="filterToDo">
+        <select onChange={statusHandler} name="" className="filterToDo">
           <option value="all">All</option>
           <option value="checked">Checked</option>
           <option value="more">More To Do</option>
