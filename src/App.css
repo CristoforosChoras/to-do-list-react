@@ -5,15 +5,14 @@
 }
 body {
   background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Kalam', cursive;
-  
+  font-family: "Kalam", cursive;
 }
-
+/* need qq */
 .App {
   background-color: #474747;
   background-image: url("https://www.transparenttextures.com/patterns/notebook.png");
@@ -41,7 +40,6 @@ form {
 .toDoInput {
   width: 15rem;
   height: 2.2rem;
-
 }
 
 .filterToDo {
@@ -72,15 +70,17 @@ li {
   flex-direction: row;
 }
 
-.btnSubmit, .btnGreen{
+.btnSubmit,
+.btnGreen {
   border-radius: 100%;
   border: 4px rgb(66, 64, 64) solid;
 }
-.btnSubmit:hover, .btnGreen:hover {
+.btnSubmit:hover,
+.btnGreen:hover {
   border-radius: 100%;
   border: 4px rgb(85, 149, 85) solid;
 }
-.btnRed{
+.btnRed {
   border-radius: 100%;
   border: 4px rgb(66, 64, 64) solid;
 }
@@ -89,163 +89,32 @@ li {
   border: 4px rgb(176, 69, 69) solid;
 }
 
+@media screen and (max-width: 600px) {
+ 
+  .App {
+    background-color: #474747;
+    background-image: url("https://www.transparenttextures.com/patterns/notebook.png");
+    width: 20rem;
+    height: 35rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    font-size: 1.6rem;
+  }
+  form {
+    width: 20rem;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+  }
+  .holdItems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+  }
 
-
-
-#pencil_wrapper{
-  position: absolute;
-  top: 140px;
-  left: 390px;
-  width: 50px;
-  transform: translate(-50%,-50%) rotate(-45deg);
-}
-.eraser{
-  position: relative;
-  top: 1px;
-  left: -11px;
-  width: 43px;
-  height: 30px;
-  box-shadow: 0 3px 1px #b57070, 0 -1px 2px #b57070;
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
-  background: linear-gradient(to right,  #cd8282 0%,#f5aaaa 40%,#b96e6e 75%,#b96e6e 100%);
-}
-.sleeve{
-  position: relative;
-  top: 2px;
-  left: -13px;
-  width: 46px;
-  height: 35px;
-  border-radius: 2px;
-  border-bottom: solid thin #2C2C2C;
-  border-right: solid thin #2C2C2C;
-  background: linear-gradient(to right, #867163 0%,#f8e0cb 40%, #eed3be 50%, #4c3b30 100%);
-  z-index: 2;
-}
-.sleeve:before {
-  position: absolute;
-  content: "";
-  top: 8px;
-  left: 5px;
-  width: 34px;
-  height: 8px;
-  border-top: solid 3px rgba(0,0,0,.07);
-  border-bottom: solid 3px rgba(0,0,0,.07);
-  border-radius: 2px;
-}
-.shaft {
-  position: relative;
-  top: 0;
-  width: 21px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  z-index: 1;
-}
-.shaft:before,
-.shaft:after {
-  position: absolute;
-  content: "";
-  width: 10px;
-}
-.shaft,
-.shaft:before,
-.shaft:after {
-  top: 0;
-  height: 160px;
-}
-.shaft:before {
-  left: -12px;
-  border-top-left-radius: 4px;
-  border-bottom-right-radius: 10px;
-}
-.shaft:after {
-  left: 21px;
-  border-top-right-radius: 2px;
-  border-bottom-left-radius: 8px;
-}
-.point {
-  position: relative;
-  top: -2px;
-  left: -12px;
-  width: 0;
-  height: 0;
-  border-top: solid 40px rgba(202,176,147,1);
-  border-right: solid 22.5px rgba(202,176,147,0);
-  border-left: solid 22.5px rgba(202,176,147,0);
-}
-.point:before {
-  position: absolute;
-  content: "";
-  top: -50px;
-  left: -18px;
-  width: 35px;
-  height: 20px;
-  background: rgba(197,173,145,1);
-}
-.point:after {
-  position: absolute;
-  content: "";
-  top: -49px;
-  left: -15px;
-  width: 3px;
-  height: 0px;
-  background: linear-gradient(to right,  rgba(208,181,159,0.65) 0%,rgba(253,231,213,1) 40%,rgba(240,187,162,0.5) 85%,rgba(197,173,145,1) 100%);
-  border-radius: 50% / 0% 0% 80% 80%;
-}
-.lead {
-  position: relative;
-  top: -14px;
-  left: 3px;
-  width: 0;
-  height: 0;
-  border-top: solid 13px #000000;
-  border-right: solid 7px rgba(255,255,255,0);
-  border-left: solid 7px rgba(255,255,255,0);
-  z-index: 1;
-}
-.lead:before {
-  position: absolute;
-  content: "";
-  top: -13px;
-  left: -5px;
-  border-top: solid 10px rgba(255,255,255,.6);
-  border-right: solid 0 rgba(0,255,0,0);
-  border-left: solid 5px rgba(255,255,255,0);
-}
-.lead:after {
-  position: absolute;
-  content: "Ideas";
-  top: -80px;
-  left: -53px;
-  width: 105px;
-  display: block;
-  color: #000000;
-  font: small-caps 14px 'helvetica';
-  text-transform: lowercase;
-  text-align: right;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 0px rgba(255,255,255,.35);
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-}
-
-#pencil_wrapper.green .shaft {
-  background-color: #363836;
-  border-bottom: solid 6px #c6c8c6;
-}
-#pencil_wrapper.green .shaft:before {
-  background-color: #363836;
-  border-right: solid 2px #c6c8c6;
-  border-bottom: solid 4px #c6c8c6;
-  border-left: solid thin #c6c8c6;
-}
-#pencil_wrapper.green .shaft:after {
-  background-color: #363836;
-  border-right: solid 1px #c6c8c6;
-  border-bottom: solid 4px #c6c8c6;
-  border-left: solid thin #c6c8c6;
 }

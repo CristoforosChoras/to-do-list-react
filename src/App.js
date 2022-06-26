@@ -30,16 +30,6 @@ function App() {
     <div className="App">
       <header className="header">To Do List</header>
 
-      <div className="pencil_box">
-        <div id="pencil_wrapper" className="green">
-            <div className="eraser"></div>
-            <div className="sleeve"></div>
-            <div className="shaft"></div>
-            <div className="point"></div>
-            <div className="lead"></div>
-        </div>
-    </div>
-
       <Form
         inputText={inputText}
         todo={todo}
