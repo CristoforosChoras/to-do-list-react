@@ -4,56 +4,88 @@
   box-sizing: border-box;
 }
 body {
+  min-height: 100vh;
+  width: 100vw;
   background-color: rgb(190, 190, 250);
   color: wheat;
-  min-height: 100vh;
-}
-
-.App {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.App {
+  width: 30rem;
+  height: 35rem;
+  display: flex;
+  align-items: center;
   flex-direction: column;
-  border: 2px green solid;}
+  gap: 5rem;
+  border: 2px green solid;
+  border-radius: 15px;
+}
 .header {
   font-size: 4rem;
 }
 /*form input button select styles */
 form {
-  width: 25vw;
+  width: 30rem;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
   border-radius: 10px;
   border: 2px green solid;
 }
 .toDoInput {
-  width: 70%;
-  height: 1.7rem;
+  width:15rem;
+  height: 2.2rem;
   border: 2px green solid;
+  border-radius: 10px;
+  
 }
 .btn {
-  width: 2rem;
-  height: 1.7rem;
+  width: 2.3rem;
+  height: 2.2rem;
   border: none;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .filterToDo {
-  width: 6.2rem;
-  height: 1.7rem;
+  width:9rem;
+  height: 2.2rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin: 9%;
   border: 2px green solid;
 }
 
-.holdItems{
-  background-color: black;
-  width: 20vw;
-  height: 20vh;
-  border: 2px black solid;
+.holdItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.checked{
-display: none;}
+.btnHolder{
+  display: flex;
+  border: 2px black solid;
+  cursor: pointer;
+}
+.holdItems {
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+  border: 2px black solid;
+  margin-top: 2%;
+
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border: 2px rebeccapurple solid;
+}
+.checkBtn{
+background-color: black;
+}
+.select{
+  width: 10rem;
+}

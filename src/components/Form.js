@@ -1,6 +1,11 @@
 import React from "react";
+import AddIcon from '@mui/icons-material/Add';
+import Fab from '@mui/material/Fab';
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 
-const Form = ({ setInputText, todo, setTodo, inputText,setStatus }) => {
+const Form = ({ setInputText, todo, setTodo, inputText, setStatus }) => {
   const inputTextHandler = (event) => {
     setInputText(event.target.value);
   };
@@ -12,15 +17,15 @@ const Form = ({ setInputText, todo, setTodo, inputText,setStatus }) => {
         { text: inputText, checked: false, id: Math.random() * 1000 },
       ]);
       setInputText("");
-    }else{
-      alert("noooooo")
     }
-    
   };
 
-  const statusHandler =(event)=>{
-setStatus(event.target.value)
-  }
+  const statusHandler = (event) => {
+    setStatus(event.target.value);
+  };
+
+  
+   
 
   return (
     <form>
@@ -30,13 +35,22 @@ setStatus(event.target.value)
         type="text"
         className="toDoInput"
       ></input>
-      <button onClick={submitTodoHandler} className="btn"></button>
+      <Fab onClick={submitTodoHandler} className="btn" size="small" color="secondary" aria-label="add">
+        <AddIcon />
+      </Fab>
       <div className="select">
-        <select onChange={statusHandler} name="" className="filterToDo">
-          <option value="all">All</option>
-          <option value="checked">Checked</option>
-          <option value="more">More To Do</option>
-        </select>
+        <FormControl  >
+          <Select
+            onChange={statusHandler}
+            autoWidth
+            name=""
+            className="filterToDo"
+          >
+            <MenuItem value="all">All</MenuItem>
+            <MenuItem value="checked">Checked</MenuItem>
+            <MenuItem value="more">More To Do</MenuItem>
+          </Select>
+        </FormControl>
       </div>
     </form>
   );

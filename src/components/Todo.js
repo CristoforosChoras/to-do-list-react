@@ -1,4 +1,6 @@
 import React from "react";
+import HighlightOffTwoToneIcon from '@mui/icons-material/HighlightOffTwoTone';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const ListTodo = ({ text, todoItem, todo, setTodo }) => {
   const deleteHandler = () => {
@@ -20,15 +22,19 @@ const ListTodo = ({ text, todoItem, todo, setTodo }) => {
 
   return (
     <div className="holdItems">
-      <li className={`listTodo  ${todoItem.checked ? "checked" : ""}`}>
+      <li className={`listTodo  ${todoItem.checked ? 
+      "checked" : ""}`}>
         {text}
       </li>
-      <button onClick={checkBtnHandler} className="checkBtn">
-        Check
-      </button>
-      <button onClick={deleteHandler} className="deleteBtn">
-        Delete
-      </button>
+      <div className="btnHolder">
+      <div onClick={checkBtnHandler} className="checkBtn">
+        <CheckCircleIcon/>
+      </div>
+      <div onClick={deleteHandler} className="deleteBtn">
+      <HighlightOffTwoToneIcon/>
+      </div>
+      </div>
+      
     </div>
   );
 };
