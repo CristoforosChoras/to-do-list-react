@@ -66,7 +66,7 @@ LinkedIn: [your linkedIn](https://www.linkedin.com/in/christoforos-choras-213220
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [GoogleFonts](https://fonts.google.com/)
 - [Material ui ](https://mui.com/)
-- [Codepen Irusik](https://codepen.io/Irusik)
+
 
 
 
