@@ -5,15 +5,19 @@ import Form from "./components/Form";
 import ToDoList from "./components/ToDoList";
 
 function App() {
-
-const[inputText, setInputText] = useState("");
-const [todos,setTodos] = useState([])
+  const [inputText, setInputText] = useState("");
+  const [todo, setTodo] = useState([]);
 
   return (
     <div className="App">
       <header className="header">To Do List</header>
-      <Form setInputText={setInputText}/>
-      <ToDoList  />
+      <Form
+        inputText={inputText}
+        todo={todo}
+        setTodo={setTodo}
+        setInputText={setInputText}
+      />
+      <ToDoList todo={todo} />
     </div>
   );
 }

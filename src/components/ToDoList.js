@@ -1,9 +1,14 @@
 import React from "react";
+import ListTodo from "./Todo";
 
-const ToDoList = () => {
+const ToDoList = ({ todo }) => {
   return (
     <div className="toDoContainer">
-      <ul className="toDoItem"></ul>
+      <ul className="toDoItem">
+        {todo.map((todoItem) => (
+          <ListTodo />
+        ))}
+      </ul>
     </div>
   );
 };

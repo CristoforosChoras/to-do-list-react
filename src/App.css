@@ -14,7 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 8rem;
+  gap: 2rem;
 }
 .header {
   font-size: 4rem;
@@ -27,6 +27,7 @@ form {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  border: 2px black solid;
 }
 .toDoInput {
   width: 70%;
@@ -48,4 +49,10 @@ form {
   border-radius: 5px;
   cursor: pointer;
   margin: 9%;
+}
+
+.holdItems{
+  background-color: black;
+  width: 20vw;
+  height: 20vh;
 }
