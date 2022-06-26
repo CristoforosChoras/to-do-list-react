@@ -6,7 +6,7 @@ const ToDoList = ({ todo }) => {
     <div className="toDoContainer">
       <ul className="toDoItem">
         {todo.map((todoItem) => (
-          <ListTodo />
+          <ListTodo key={todoItem.id} text={todoItem.text} />
         ))}
       </ul>
     </div>
