@@ -14,14 +14,12 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 2rem;
   border: 2px green solid;}
 .header {
   font-size: 4rem;
 }
 /*form input button select styles */
 form {
-  min-height: 20vh;
   width: 25vw;
   display: flex;
   justify-content: center;

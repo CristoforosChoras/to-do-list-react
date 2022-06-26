@@ -6,11 +6,16 @@ const Form = ({ setInputText, todo, setTodo, inputText,setStatus }) => {
   };
   const submitTodoHandler = (event) => {
     event.preventDefault();
-    setTodo([
-      ...todo,
-      { text: inputText, checked: false, id: Math.random() * 1000 },
-    ]);
-    setInputText("");
+    if (inputText.trim().length !== 0) {
+      setTodo([
+        ...todo,
+        { text: inputText, checked: false, id: Math.random() * 1000 },
+      ]);
+      setInputText("");
+    }else{
+      alert("noooooo")
+    }
+    
   };
 
   const statusHandler =(event)=>{
