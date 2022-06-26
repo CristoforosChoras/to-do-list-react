@@ -1,9 +1,10 @@
 import React from "react";
-import AddIcon from '@mui/icons-material/Add';
-import Fab from '@mui/material/Fab';
+import AddIcon from "@mui/icons-material/Add";
+import Fab from "@mui/material/Fab";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import Input from "@mui/material/Input";
 
 const Form = ({ setInputText, todo, setTodo, inputText, setStatus }) => {
   const inputTextHandler = (event) => {
@@ -24,22 +25,22 @@ const Form = ({ setInputText, todo, setTodo, inputText, setStatus }) => {
     setStatus(event.target.value);
   };
 
-  
-   
-
   return (
     <form>
-      <input
+      <Input
+        placeholder="Add a note"
         value={inputText}
         onChange={inputTextHandler}
         type="text"
         className="toDoInput"
-      ></input>
-      <Fab onClick={submitTodoHandler} className="btn" size="small" color="secondary" aria-label="add">
-        <AddIcon />
-      </Fab>
+      />
+      <button onClick={submitTodoHandler} className="btnSubmit">
+        <Fab size="small" aria-label="add">
+          <AddIcon />
+        </Fab>
+      </button>
       <div className="select">
-        <FormControl  >
+        <FormControl>
           <Select
             onChange={statusHandler}
             autoWidth

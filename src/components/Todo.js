@@ -1,7 +1,7 @@
 import React from "react";
-import HighlightOffTwoToneIcon from '@mui/icons-material/HighlightOffTwoTone';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import CheckIcon from "@mui/icons-material/Check";
+import Fab from "@mui/material/Fab";
 const ListTodo = ({ text, todoItem, todo, setTodo }) => {
   const deleteHandler = () => {
     setTodo(todo.filter((element) => element.id !== todoItem.id));
@@ -22,19 +22,27 @@ const ListTodo = ({ text, todoItem, todo, setTodo }) => {
 
   return (
     <div className="holdItems">
-      <li className={`listTodo  ${todoItem.checked ? 
-      "checked" : ""}`}>
+      <li className={`listTodo  ${todoItem.checked ? "checked" : ""}`}>
         {text}
       </li>
       <div className="btnHolder">
-      <div onClick={checkBtnHandler} className="checkBtn">
-        <CheckCircleIcon/>
+        <button className="btnGreen">
+          <Fab
+            onClick={checkBtnHandler}
+            
+            size="small"
+            color=""
+            aria-label="add"
+          >
+            <CheckIcon />
+          </Fab>
+        </button>
+        <button className="btnRed">
+          <Fab onClick={deleteHandler} c size="small" color="">
+            <DeleteOutlineIcon />
+          </Fab>
+        </button>
       </div>
-      <div onClick={deleteHandler} className="deleteBtn">
-      <HighlightOffTwoToneIcon/>
-      </div>
-      </div>
-      
     </div>
   );
 };
