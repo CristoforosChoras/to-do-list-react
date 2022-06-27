@@ -71,6 +71,11 @@ li {
   flex-direction: row;
 }
 
+.checked{
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
 .btnSubmit,
 .btnGreen {
   border-radius: 100%;
@@ -105,7 +110,6 @@ li {
   }
   form {
     width: 20rem;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -114,8 +118,8 @@ li {
   .holdItems {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: fit-content;
+    justify-content: space-between;
+    width: 18rem;
   }
 
 }

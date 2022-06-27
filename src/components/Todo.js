@@ -29,7 +29,6 @@ const ListTodo = ({ text, todoItem, todo, setTodo }) => {
         <button className="btnGreen">
           <Fab
             onClick={checkBtnHandler}
-            
             size="small"
             color=""
             aria-label="add"
