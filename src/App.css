@@ -23,6 +23,7 @@ body {
   flex-direction: column;
   border-radius: 15px;
   font-size: 1.6rem;
+  overflow: auto;
 }
 .header {
   font-size: 4.5rem;
